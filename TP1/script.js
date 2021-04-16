@@ -8,13 +8,14 @@ req.end(function (res) {
         
         
         // 10 enregistrement
-        console.log("######  10 enregitrements : ")
+        console.log("\n\n######  10 enregitrements : \n")
         for (var i = 0;i<10;i++){
             console.log(res.body[i])
         }
         
 
-        // filtred by "M"
+        console.log("\n######  filtred by M : \n")
+
         function filter(index, letter) {
                 for (i in res.body){
                         if (res.body[i]['organisateur'].charAt(index) === letter)
