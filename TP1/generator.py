@@ -12,6 +12,7 @@ for i in range(100):
     for j in range(f.random_int(1,5)):
     
         donors=[]
+        recolter = 0 
         for j in range(f.random_int(0,10)):
             
             amount = f.random_int(0,100)
@@ -28,6 +29,7 @@ for i in range(100):
             amount1 -= amount1%100
         dons.append(
             {
+        
                 "title" : f.sentence(),
                 "description" :f.paragraph(),
                 "date_publier":f"{f.day_of_month()}/{f.month()}/{f.year()}",
@@ -42,7 +44,7 @@ for i in range(100):
 
     data.append(
         {
-        
+            "id" : i,
             "organisateur" :f"{last_name} {first_name}",
             "mail":f"{first_name}{last_name}@gmail.com",
             "ville":f.city(),
@@ -56,6 +58,6 @@ for i in range(100):
             "dons":dons
         })
 
-with open("db.json", mode='w', encoding='utf-8') as feedsjson:
+with open("db1.json", mode='w', encoding='utf-8') as feedsjson:
 
     json.dump(data, feedsjson)
