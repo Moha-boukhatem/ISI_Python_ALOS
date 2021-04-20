@@ -50,12 +50,10 @@ function update_data(){
 }
 
 function header_print(){
-    unirest.patch('http://localhost:3000/data/100')
-    .headers({'Accept': 'application/json', 'Content-Type': 'application/json'})
-    .send({
-        "ville": "oran",     
-    }).then((response) => {console.log(response.body)})    
+    unirest.get('http://localhost:3000/data')
+    .then((response) => {console.log(response.headers)})    
 }
 
-//add_data();
+add_data();
 update_data();
+header_print();
