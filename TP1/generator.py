@@ -9,17 +9,20 @@ data = []
 for i in range(100):
     
     dons = []
-    for j in range(f.random_int(1,5)):
+    y=0
+    for y,j in enumerate(range(f.random_int(1,5))):
     
         donors=[]
         recolter = 0 
-        for j in range(f.random_int(0,10)):
+        x=0
+        for x,j in enumerate(range(f.random_int(0,10))):
             
             amount = f.random_int(0,100)
             amount -= amount%5
             recolter += amount
             donors.append(
                 {
+                    "id":x,
                     "name":f.name(),
                     "amount":amount,
                     "comment" : f.sentence()
@@ -29,7 +32,7 @@ for i in range(100):
             amount1 -= amount1%100
         dons.append(
             {
-        
+                "id":y,
                 "title" : f.sentence(),
                 "description" :f.paragraph(),
                 "date_publier":f"{f.day_of_month()}/{f.month()}/{f.year()}",
