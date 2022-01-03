@@ -1,0 +1,14 @@
+*{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(219, 228, 236);
+}
+h1{
+    text-align: center;
+}
+a{
+    color:darkslategray;
+    text-decoration: none;
+}
+.description{
+    font-size: 1.5em;
+}

@@ -1,0 +1,36 @@
+ [{
+    "id":100,
+    "organisateur": "ben",
+    "mail": "ben94orly@gmail.com",
+    "ville": "oran",
+    "credit_card": [
+      {
+        "card_number": "5256339134777152",
+        "card_expire": "10/27",
+        "security_code": "701"
+      }
+    ],
+    "dons": [
+      {
+        "title": "Send 60 Girls in Pakistan to School.",
+        "description": "This project supports secondary education for 60 girls in various Pakistani villages. In our role as a pass through organization and partner of Bedari, a nonprofit based in Pakistan, we cover the costs associated with safely transporting girls from their homes in remote villages to their schools.",
+        "date_publier": "05/03/1994",
+        "objectif": 75000 ,
+        "recolter": 47733,
+        "donors": [
+          {
+            "name": "Cassandra Contreras",
+            "amount": 200,
+            "comment": "good luck !"
+          },
+          {
+            "name": "Angela Watkins",
+            "amount": 50,
+            "comment": ""
+          }          
+        ]
+      }
+    ]
+  }
+]
+

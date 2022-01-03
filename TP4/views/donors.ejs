@@ -1,0 +1,43 @@
+<%- include('main') %>
+
+  <title><%=data.title%></title>
+</head>
+<body>
+
+
+<h1><b>L'annonce : </b><%=data.title%></h1>
+<p class ="description"><b>Description : </b><%=data.description%></p>
+
+<p class ="description"style="float : right"><b>Publié le </b><%= data.date_publier %> </p>
+
+<p class ="description"><b>Objectif : </b> <%= data.objectif %> $</p>
+<p class ="description"><b>Récolté : </b> <%= data.recolter %> $ </p>       
+<%for (var org of data.donors){ %>
+  <ol> 
+      <lu>
+        <%= org.name %> a fait un don de : <b><%= org.amount %> $ </b>      
+        <br><br>
+      </lu>
+  </ol>
+
+<% } %>
+<p class ="description"><b>Commentaires : </b></p>
+
+<%for (var org of data.donors){ %>
+  
+  <ol> 
+      <lu>
+        <b><%= org.name %> </b><br><br>        
+          <div><%= org.comment %></div>
+        <br>
+      </lu>
+  </ol>
+
+<% } %>
+
+
+
+
+
+ </body>
+</html>

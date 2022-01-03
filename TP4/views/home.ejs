@@ -1,0 +1,28 @@
+<%- include('main') %>
+
+<link rel="stylesheet" type="text/css" href="css/css.css"/>
+  <title>Home</title>
+  
+</head>
+<body>
+<h1>Collecting Payments & Donations API</h1>
+<%for (var orgi of data){ %>
+  
+  
+  <ol> 
+    <%for (var org of orgi.dons){ %>
+      <lu>
+        <a class ="description" href="/api/organizers/<%=orgi.id%>/collections/<%=org.id%>"><%= org.title %></a>         <p> <b>Description</b> : <%= org.description %></p>
+        <p>Publié le <%= org.date_publier %> par <a href="/api/organizers/<%=orgi.id%>"><%= orgi.organisateur %></a></p>
+
+        <p>Objectif : <%= org.objectif %> $</p><p>Récolté : <%= org.recolter %> $ </p>
+        <br><br>
+      </lu>
+    <% } %>
+  </ol>
+<% } %>
+
+
+
+ </body>
+</html>

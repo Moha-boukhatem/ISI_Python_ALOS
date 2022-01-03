@@ -1,0 +1,22 @@
+<%- include('main') %>
+
+  <title><%= data.organisateur %></title>
+</head>
+<body>
+<h1>Les coordonnées de <%= data.organisateur %></h1>
+<b>Mail : </b><%= data.mail %>
+<br>
+<br>
+
+<b>Ville : </b><%= data.ville %>
+<br>
+<br>
+
+<%for (var org of data.credit_card){ %>
+  <b>La carte de crédit : </b><%= org.card_number %>
+  <% } %>
+
+
+
+ </body>
+</html>
